@@ -19,6 +19,6 @@ chpwd() {
 
 
 # NOTE trade-offs on where the context save location strategies:
-# - under ~/.zsh/dirhist : won't track path changes. context layered on top of paths without reverse dependency.
+# - under ~/.zsh/dirhist : won't work / will potentially break after path moved. context layered on top of paths without reverse dependency.
 # - under project path (leaf) : will work with moves. paths are dirtied.
-# - under project path (root) : will work with root move. paths are somewhat leses dirtied. subpaths will be context-unaware.
+# - under project path (root) : will work with root move. paths are somewhat less dirtied. subpaths are context-unaware (until we introduce inheritance).

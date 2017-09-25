@@ -1,6 +1,6 @@
 # `zsh-scoped-history` --- zsh shell configuration that maintains history scoped to the working directory
 
-## Synopsis
+## Summary
 `zsh-scoped-history` saves command history in `$PWD/.history`. This makes searches for commands local to the current directory, so your project-specific commands -- issued in the scope of a working directory -- don't spill over to other working context.
 
 ## Install
