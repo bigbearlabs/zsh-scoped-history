@@ -1,23 +1,31 @@
-# `scoped_history` --- zsh shell configuration that maintains history scoped to the working directory
+# `zsh-scoped-history` --- zsh shell configuration that maintains history scoped to the working directory
 
 ## Synopsis
-`scoped_history` saves command history in `$PWD/.history`. This makes searches for commands local to the current directory, so your project-specific commands -- issued in the scope of a working directory -- don't spill over to other working context.
+`zsh-scoped-history` saves command history in `$PWD/.history`. This makes searches for commands local to the current directory, so your project-specific commands -- issued in the scope of a working directory -- don't spill over to other working context.
 
 ## Install
-- Antigen users:
-    - TODO
-- Raw zsh users:
-    - Download:
 
-    - Add the following line to `.zshrc`:
+- Antigen users:
+    - add the following line to `.antigenrc`:
     ```
-    source ~/.zsh/scoped_history/scoped_history.zsh
+    antigen bundle bigbearlabs/zsh-scoped-history
+    ```
+    - `antigen reset` and start a new shell.
+    
+- Raw zsh users:
+    - clone repository:
+    ```
+    git clone https://github.com/bigbearlabs/zsh-scoped-history.git ~/.zsh/zsh-scoped-history
+    ```
+    - source entry point script in `.zshrc`:
+    ```
+    source ~/.zsh/zsh-scoped-history/zsh-scoped-history.zsh
     ```
 
 ## Misc
 - You can add `.history` to your global git_ignore file if you use git in many directories:
 ```
-cat >> ~/.gitignore_global
+$ cat >> ~/.gitignore_global
 .history
 ^D
 ```
