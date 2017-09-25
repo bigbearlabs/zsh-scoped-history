@@ -2,6 +2,9 @@ HISTSIZE=1000
 SAVEHIST=10000
 setopt HIST_SAVE_NO_DUPS INC_APPEND_HISTORY
 
+# allow comments in history, for `##@`
+setopt interactivecomments
+
 
 # HISTFILE=~/.zsh/dirhist/${PWD//\//@}  # STRATEGY centralise around user preferences. 
 # mkdir -p ~/.zsh/dirhist
